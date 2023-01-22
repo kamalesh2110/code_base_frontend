@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Card from "./Card";
 
 export default function Main() {
   const [data, setData] = useState({});
@@ -29,6 +30,7 @@ export default function Main() {
       >
         SHOW DATA
       </button>
+      <Card data={data.resp}></Card>
     </div>
   );
 }
