@@ -1,16 +1,17 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Card from "./Card";
+import CardContainer from "./CardContainer";
 
 export default function Main() {
-  const [data, setData] = useState({});
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     axios
       .get("https://wicked-scarf-slug.cyclic.app/fetch")
       .then((response) => {
-        setData(response.data.data);
+        console.log(response.data.data.resp);
+        setData(response.data.data.resp);
       })
       .catch((err) => {
         console.log(err);
@@ -30,7 +31,7 @@ export default function Main() {
       >
         SHOW DATA
       </button>
-      <Card data={data.resp}></Card>
+      <CardContainer data={data}></CardContainer>
     </div>
   );
 }
