@@ -23,7 +23,11 @@ export default function Card({
       >
         <h3 style={{ textTransform: "capitalize" }}>{code_title}</h3>
         <p>{code_description}</p>
-        <p>{code_body}</p>
+        <code>
+          <pre>
+            <p>{code_body}</p>
+          </pre>
+        </code>
       </div>
     </div>
   );
