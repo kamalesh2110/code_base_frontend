@@ -86,3 +86,8 @@
     background-color: rgb(211, 19, 163);
     width: 98%;
 }
+
+.InsertCodeContainer {
+    background-image: linear-gradient(to right, rgba(223, 158, 158, 0), #b83b3b);
+    height: 40rem;
+}
