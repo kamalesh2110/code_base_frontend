@@ -14,15 +14,7 @@ export default function Card({
         margin: ".12rem",
       }}
     >
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          justifyItems: "center",
-          alignItems: "center",
-        }}
-      >
+      <div className="CardClass">
         <h3 style={{ textTransform: "capitalize" }}>{code_title}</h3>
         <p>{code_description}</p>
         <code>
