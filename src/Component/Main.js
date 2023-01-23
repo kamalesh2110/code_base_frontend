@@ -23,12 +23,14 @@ export default function Main() {
 
   return (
     <div>
-      <div className="NavBar">
-        <div className="ButtonContainer">
-          <button className="buttonAction">Show Code</button>
-          <button className="buttonAction">Insert Code</button>
+      <div style={{ padding: "1rem", hight: "4rem" }}>
+        <div className="NavBar">
+          <div className="ButtonContainer">
+            <button className="buttonAction">Show Code</button>
+            <button className="buttonAction">Insert Code</button>
+          </div>
+          {/* <h1 onClick={() => SetInsertData(!insertdata)}>Insert Data</h1> */}
         </div>
-        {/* <h1 onClick={() => SetInsertData(!insertdata)}>Insert Data</h1> */}
       </div>
       {insertdata && <InsertCode />}
       {!insertdata && <CardContainer data={data}></CardContainer>}
