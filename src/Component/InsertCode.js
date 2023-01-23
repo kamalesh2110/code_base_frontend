@@ -95,6 +95,9 @@ export default function InsertCode() {
         }}
       ></textarea>
       <button
+        style={{
+          borderRadius: ".5rem",
+        }}
         onClick={(e) => {
           dataHandler(e);
         }}
