@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import "../App.css";
 
 export default function InsertCode() {
+  const [codetitle, setCodetitle] = useState("");
+  const [codedescription, setCodedescription] = useState("");
+  const [codebody, setCodebody] = useState("");
+  const [codeauthor, setCodeauthor] = useState("");
+  const [codedifficult, setCodedifficult] = useState("");
+  const [authoremail, setAuthoremail] = useState("");
+  const [codelanguage, setCodelanguage] = useState("");
+  const [codedate, setCodedate] = useState("");
+
   return (
     <div
       style={{
