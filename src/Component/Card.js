@@ -18,7 +18,9 @@ export default function Card({
         style={{
           display: "flex",
           flexDirection: "column",
-          justifyContent: "space-evenly",
+          justifyContent: "center",
+          justifyItems: "center",
+          alignItems: "center",
         }}
       >
         <h3 style={{ textTransform: "capitalize" }}>{code_title}</h3>
