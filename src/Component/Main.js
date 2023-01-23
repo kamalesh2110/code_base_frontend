@@ -24,13 +24,6 @@ export default function Main() {
 
   return (
     <div>
-      <button
-        onClick={(e) => {
-          dataHandler(e);
-        }}
-      >
-        SHOW DATA
-      </button>
       <CardContainer data={data}></CardContainer>
     </div>
   );
