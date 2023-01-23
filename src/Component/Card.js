@@ -12,7 +12,7 @@ export default function Card({
       <p>{code_description}</p>
       <code>
         <pre>
-          <p>{code_body}</p>
+          <p style={{ overflow: "hidden" }}>{code_body}</p>
         </pre>
       </code>
     </div>

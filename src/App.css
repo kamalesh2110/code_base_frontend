@@ -39,7 +39,7 @@
 
 .MainContainer {
     background-image: linear-gradient(to right, rgba(223, 158, 158, 0), #b83b3b);
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .NavBar {
@@ -73,7 +73,6 @@
     justify-items: center;
     align-items: center;
     background-color: rgb(192, 141, 179);
-    width: 55rem;
     transition: width 2s;
     color: white;
     border: .25rem solid orange;
@@ -84,7 +83,6 @@
 
 .CardClass:hover {
     background-color: rgb(211, 19, 163);
-    width: 98%;
 }
 
 .InsertCodeContainer {
