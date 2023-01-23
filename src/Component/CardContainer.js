@@ -12,9 +12,10 @@ export default function CardContainer({ data }) {
         flexDirection: "column",
       }}
     >
-      {data.map((item) => {
+      {data.map((item, index) => {
         return (
           <Card
+            key={index}
             code_title={item.code_title}
             code_description={item.code_description}
             code_body={item.code_body}
