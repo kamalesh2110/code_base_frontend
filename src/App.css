@@ -72,5 +72,17 @@
     justify-content: center;
     justify-items: center;
     align-items: center;
-    background-color: rgb(221, 151, 204);
+    background-color: rgb(192, 141, 179);
+    width: 55rem;
+    transition: width 2s;
+    color: white;
+    border: .25rem solid orange;
+    padding: .5rem;
+    margin: .12rem;
+    border-radius: 1rem;
+}
+
+.CardClass:hover {
+    background-color: rgb(211, 19, 163);
+    width: 98%;
 }

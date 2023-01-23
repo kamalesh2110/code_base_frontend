@@ -3,7 +3,15 @@ import Card from "./Card";
 
 export default function CardContainer({ data }) {
   return (
-    <div>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        justifyItems: "center",
+        alignItems: "center",
+        flexDirection: "column",
+      }}
+    >
       {data.map((item) => {
         return (
           <Card

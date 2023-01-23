@@ -7,22 +7,14 @@ export default function Card({
   code_author,
 }) {
   return (
-    <div
-      style={{
-        border: ".25rem solid black",
-        padding: ".5rem",
-        margin: ".12rem",
-      }}
-    >
-      <div className="CardClass">
-        <h3 style={{ textTransform: "capitalize" }}>{code_title}</h3>
-        <p>{code_description}</p>
-        <code>
-          <pre>
-            <p>{code_body}</p>
-          </pre>
-        </code>
-      </div>
+    <div className="CardClass">
+      <h3 style={{ textTransform: "capitalize" }}>{code_title}</h3>
+      <p>{code_description}</p>
+      <code>
+        <pre>
+          <p>{code_body}</p>
+        </pre>
+      </code>
     </div>
   );
 }
