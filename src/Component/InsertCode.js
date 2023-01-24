@@ -6,7 +6,7 @@ import "../App.css";
 export default function InsertCode() {
   const [codetitle, setCodetitle] = useState("");
   const [codedescription, setCodedescription] = useState("");
-  const [codebody, setCodebody] = useState("");
+  const [codebody, setCodebody] = useState();
   const [codeauthor, setCodeauthor] = useState("");
   const [codedifficult, setCodedifficult] = useState("");
   const [authoremail, setAuthoremail] = useState("");
@@ -23,16 +23,26 @@ export default function InsertCode() {
       code_difficult: codedifficult,
       author_email: authoremail,
     };
-
-    const code_json = JSON.stringify(code);
-
-    axios
-      .post("https://wicked-scarf-slug.cyclic.app/insert", code)
-      .then((response) => {
-        console.log(response).catch((error) => {
-          console.log(error);
+    if (
+      code.code_title.length === 0 ||
+      code.code_description.length === 0 ||
+      code.code_body.length === 0 ||
+      code.code_author.length === 0 ||
+      code.code_date === 0 ||
+      code.code_language === 0 ||
+      code.code_difficult === 0 ||
+      code.author_email === 0
+    ) {
+      alert("Please enter Database");
+    } else {
+      axios
+        .post("https://wicked-scarf-slug.cyclic.app/insert", code)
+        .then((response) => {
+          console.log(response).catch((error) => {
+            console.log(error);
+          });
         });
-      });
+    }
   };
 
   return (
