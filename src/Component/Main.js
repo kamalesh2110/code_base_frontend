@@ -24,16 +24,19 @@ export default function Main() {
   };
 
   useEffect(() => {
-    axios
-      .get("https://wicked-scarf-slug.cyclic.app/fetch")
-      .then((response) => {
-        console.log(response.data.data.resp);
-        setData(response.data.data.resp);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
+    if (!insertdata) {
+      axios
+        .get("https://wicked-scarf-slug.cyclic.app/fetch")
+        .then((response) => {
+          console.log(response.data.data.resp);
+          setData(response.data.data.resp);
+        })
+        .catch((err) => {
+          console.log(err);
+          console.log(err);
+        });
+    }
+  }, [insertdata]);
 
   return (
     <div>
