@@ -33,14 +33,24 @@ export default function InsertCode() {
       code.code_difficult === 0 ||
       code.author_email === 0
     ) {
-      alert("Please enter Database");
+      alert("Please enter correct code");
     } else {
       axios
         .post("https://wicked-scarf-slug.cyclic.app/insert", code)
         .then((response) => {
-          console.log(response).catch((error) => {
-            console.log(error);
-          });
+          if (response.status === 200) {
+            setCodetitle("");
+            setAuthoremail("");
+            setCodeauthor("");
+            setCodebody("");
+            setCodedescription("");
+            setCodelanguage("");
+            setCodedifficult("");
+            alert("Data saved successfully");
+          }
+        })
+        .catch((error) => {
+          console.log(error);
         });
     }
   };
@@ -56,6 +66,7 @@ export default function InsertCode() {
       <input
         type="text"
         placeholder="Code Title"
+        value={codetitle}
         onChange={(e) => {
           setCodetitle(e.target.value);
         }}
@@ -63,6 +74,7 @@ export default function InsertCode() {
       <input
         type="text"
         placeholder="Code Description"
+        value={codedescription}
         onChange={(e) => {
           setCodedescription(e.target.value);
         }}
@@ -70,6 +82,7 @@ export default function InsertCode() {
       <input
         type="text"
         placeholder="Code Author"
+        value={codeauthor}
         onChange={(e) => {
           setCodeauthor(e.target.value);
         }}
@@ -77,6 +90,7 @@ export default function InsertCode() {
       <input
         type="text"
         placeholder="Code Language"
+        value={codelanguage}
         onChange={(e) => {
           setCodelanguage(e.target.value);
         }}
@@ -84,6 +98,7 @@ export default function InsertCode() {
       <input
         type="text"
         placeholder="Code Difficulty"
+        value={codedifficult}
         onChange={(e) => {
           setCodedifficult(e.target.value);
         }}
@@ -91,6 +106,7 @@ export default function InsertCode() {
       <input
         type="mail"
         placeholder="Email"
+        value={authoremail}
         onChange={(e) => {
           setAuthoremail(e.target.value);
         }}
@@ -100,6 +116,7 @@ export default function InsertCode() {
         cols="60"
         name="description"
         placeholder="enter code"
+        value={codebody}
         onChange={(e) => {
           setCodebody(e.target.value);
         }}
